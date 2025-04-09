@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*styles particles*/
+
+
+
+/*Styles for navbar*/
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.nav {
+    display: flex; /* Asegura que los <li> estén en línea */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px; /* Espaciado entre elementos */
+}
+
+.nav li {
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav a:hover{
+    transition: all 0.3s;
+    color: #ccc;
+}
+
+/*=====================*/ 
+
+/*styles for button of hero*/
+
+.firstBtn {
+    margin-top: 25px;
+    background-color: #44d62c; /* Verde original */
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: none;
+    position: relative;
+    color: black; /* Texto negro */
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: -1px 2px 12px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+/* Efecto de fondo al hacer hover */
+.firstBtn:before {
+    --progress: 100%;
+    background: #2c8c1c; /* Un verde más oscuro para contrastar */
+    -webkit-clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+    z-index: 0;
+}
+
+/* Cambia el efecto de recorte en hover */
+.firstBtn:hover:before {
+    --progress: 0%;
+}
+
+/* Contenedor del texto */
+.firstBtn .text-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/* Texto que se anima */
+.firstBtn .text a {
+    display: block;
+    position: relative;
+    transition: color 0.2s ease-in-out;
+    z-index: 2;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Cambio de color de texto al hacer hover */
+.firstBtn:hover .text a {
+    color: white; /* Hace que el texto sea visible en el fondo oscuro */
+    animation: move-up-alternate 0.3s ease forwards;
+}
+
+/* Animación del texto */
+@keyframes move-up-alternate {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(80%); }
+    51% { transform: translateY(-80%); }
+    100% { transform: translateY(0); }
+}
+
+/*=======================================*/
+
+
+.mainPresentation {
+    background: rgb(110,71,159);
+background: radial-gradient(circle, rgba(110,71,159,1) 0%, rgba(63,66,199,1) 48%, rgba(108,86,168,1) 100%);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
+}
+
+.mainPresentation h1 {
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+    position: relative;
+    color: #fff;
+}
+
+.mainPresentation p {
+    font-size: 1.5rem; 
+    max-width: 600px;
+    position: relative;
+    color: #fff; 
+}
+
+/*============================================*/
+
+/*About sec*/
+.fa-user{
+    padding-right: 10px;
+    padding-bottom: 2px;
+    color: #ccc;
+}
+
+.fa-gears{
+    padding-right: 10px;
+}
+
+
+.description {
+    background-color: #141414;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.about{
+    font-weight: bold;
+    text-decoration: overline;
+    text-decoration-color: #72d34c;
+}
+
+.description h2 {
+    padding-top: 20px;
+}
+
+.about-text {
+    max-width: 700px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra la caja de texto */
+}
+
+.description p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 50px;
+}
+
+.deve {
+    padding-top: 10px;
+    font-size: 1.5rem;
+    color: #b4b4b4;
+} .mt-5{
+    font-size: 1.5rem;
+    color: #b4b4b4;
+}
+
+.tech-logo {
+    width: 80px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+/*============================================*/
+
+/* Sección Contact Form */
+.contactForm {
+    background-color: #181818;
+    color: #fff;
+    padding: 40px 0;
+}
+
+/* Input y textarea personalizados */
+#name, #email, #message {
+    border: 2px solid #48ff008f;
+    background: #181818;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Ajuste de la etiqueta de ayuda */
+#emailHelp {
+    color: #999;
+}
+
+/* Quitar el resplandor azul en el focus */
+#name:focus, #email:focus, #message:focus {
+    box-shadow: none;
+    border-color: #48ff00;
+}
+
+#message{
+    resize: none;
+}
+
+/* Botón de envío con hover */
+.btn-primary {
+    background-color: #48ff00;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #3ad400;
+}
+
+/*boton submit form*/
+
+/* From Uiverse.io by gharsh11032000 */ 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: greenyellow;
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* =========================================== */
+
+/* toast styles */
+
+/*=======================================*/
+
+
+/*footer*/
+
+.mb-1{
+    color: #999;
+    font-size: 12px;
+    padding-bottom: 8px;
+} 
+.mb-1 a{
+    text-decoration: none;
+    color: #a1a1a1;
+}
+
+.fa-brands{
+    color: #48ff008f;
+ }.fa-brands:hover{
+    transition: all 0.3s;
+    color: #3ad400;
+ }
+
+
+  
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #1e1d1d; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
