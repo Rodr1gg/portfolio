@@ -14,18 +14,18 @@
 .header {
     display: flex;
     justify-content: center;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; 
+    position: fixed; 
     top: 0;
-    z-index: 1000; /* Asegura que esté por encima del contenido */
+    z-index: 1000; 
 }
 
 .nav {
-    display: flex; /* Asegura que los <li> estén en línea */
+    display: flex; 
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 40px; /* Espaciado entre elementos */
+    gap: 40px;
 }
 
 .nav li {
@@ -51,12 +51,12 @@
 
 .firstBtn {
     margin-top: 25px;
-    background-color: #44d62c; /* Verde original */
+    background-color: #44d62c; 
     padding: 10px 25px;
     border-radius: 6px;
     border: none;
     position: relative;
-    color: black; /* Texto negro */
+    color: black; 
     font-weight: 600;
     font-size: 16px;
     box-shadow: -1px 2px 12px 2px;
@@ -66,10 +66,9 @@
     text-transform: uppercase;
 }
 
-/* Efecto de fondo al hacer hover */
 .firstBtn:before {
     --progress: 100%;
-    background: #2c8c1c; /* Un verde más oscuro para contrastar */
+    background: #2c8c1c; 
     -webkit-clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
     clip-path: polygon(100% 0, var(--progress) var(--progress), 0 100%, 100% 100%);
     content: "";
@@ -79,12 +78,11 @@
     z-index: 0;
 }
 
-/* Cambia el efecto de recorte en hover */
 .firstBtn:hover:before {
     --progress: 0%;
 }
 
-/* Contenedor del texto */
+
 .firstBtn .text-container {
     display: block;
     overflow: hidden;
@@ -92,7 +90,7 @@
     z-index: 2;
 }
 
-/* Texto que se anima */
+
 .firstBtn .text a {
     display: block;
     position: relative;
@@ -102,13 +100,13 @@
     color: #000;
 }
 
-/* Cambio de color de texto al hacer hover */
+
 .firstBtn:hover .text a {
-    color: white; /* Hace que el texto sea visible en el fondo oscuro */
+    color: white; 
     animation: move-up-alternate 0.3s ease forwards;
 }
 
-/* Animación del texto */
+/* Text animation */
 @keyframes move-up-alternate {
     0% { transform: translateY(0); }
     50% { transform: translateY(80%); }
@@ -177,8 +175,8 @@ background: radial-gradient(circle, rgba(110,71,159,1) 0%, rgba(63,66,199,1) 48%
 }
 
 .about-text {
-    max-width: 700px; /* Limita el ancho del texto */
-    margin: 0 auto; /* Centra la caja de texto */
+    max-width: 700px; 
+    margin: 0 auto; 
 }
 
 .description p {
@@ -213,7 +211,7 @@ background: radial-gradient(circle, rgba(110,71,159,1) 0%, rgba(63,66,199,1) 48%
     padding: 40px 0;
 }
 
-/* Input y textarea personalizados */
+/* Input & textarea */
 #name, #email, #message {
     border: 2px solid #48ff008f;
     background: #181818;
@@ -221,12 +219,12 @@ background: radial-gradient(circle, rgba(110,71,159,1) 0%, rgba(63,66,199,1) 48%
     padding: 10px;
 }
 
-/* Ajuste de la etiqueta de ayuda */
+
 #emailHelp {
     color: #999;
 }
 
-/* Quitar el resplandor azul en el focus */
+
 #name:focus, #email:focus, #message:focus {
     box-shadow: none;
     border-color: #48ff00;
@@ -236,7 +234,7 @@ background: radial-gradient(circle, rgba(110,71,159,1) 0%, rgba(63,66,199,1) 48%
     resize: none;
 }
 
-/* Botón de envío con hover */
+
 .btn-primary {
     background-color: #48ff00;
     border: none;

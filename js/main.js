@@ -1,4 +1,4 @@
-// Animación para el nombre
+// Animtation for hero
 var typed = new Typed('#typed-text', {
     strings: ['Hi, I\'m Rodrigo Machado'],
     typeSpeed: 50,
@@ -12,7 +12,7 @@ var typed = new Typed('#typed-text', {
     }
 });
 
-// Esperamos a que termine la primera animación antes de iniciar la segunda
+
 setTimeout(() => {
     var typed2 = new Typed("#typed-text2", {
         strings: ['Web Developer', 'Graphic Designer'],
@@ -21,7 +21,7 @@ setTimeout(() => {
         loop: true,
         showCursor: true
     });
-}, 3000); // Se inicia después de 2 segundos para evitar que interfieran
+}, 3000); 
 
 
 //scrollreveal here
